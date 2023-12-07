@@ -1,78 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unicú nota alunos</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Média</title>
+  <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
-    <main>
-        <header>
-            <tr>
-                <a href="#"><td><img class="foto" src="./imagens/whatsapp.png" alt="Whatsapp"></td></a>
-                <a href="#"><td><img class="foto" src="./imagens/instagram.png" alt="Instagram"></td></a>
-                <a href="#"><td><img class="foto" src="./imagens/facebook.png" alt="Facebook"></td></a>
-                <a href="#"><td><img class="foto" src="./imagens/linkedin.png" alt="Linkdin"></td></a>
-                <a href="#"><td><img class="foto" src="./imagens/telephone-fixo.png" alt="Telefone-fixo"></td></a>
+
+  <header>
+    <tr>
+        <a href="#"><td><img class="foto" src="./imagens/whatsapp.png" alt="Whatsapp"></td></a>
+        <a href="#"><td><img class="foto" src="./imagens/instagram.png" alt="Instagram"></td></a>
+        <a href="#"><td><img class="foto" src="./imagens/facebook.png" alt="Facebook"></td></a>
+        <a href="#"><td><img class="foto" src="./imagens/linkedin.png" alt="Linkdin"></td></a>
+        <a href="#"><td><img class="foto" src="./imagens/telephone-fixo.png" alt="Telefone-fixo"></td></a>
 
 
-            </tr>
+    </tr>
 
-        </header>
-        
-        <h1>Seja único, seja Unicú - Universidade de Curitiba</h1>
-        <div>
-            <script src="./js/script.js"></script> 
-            <form>
-                <label>Nome do Aluno(a/e): </label>
-                <input type="text" id="NomeAluno" placeholder="Digite aqui, seu nome.">
-                <br>
+  </header>
 
-                <label>Selecione a matéria:</label>
-                <select id="materias">
-                    <option value="m1">Português</option>
-                    <option value="m2">Matemática</option>
-                    <option value="m3">Geografia</option>
-                    <option value="m4">História</option>
-                    <option value="m5">Ciências</option>
-                    <option value="m6">Inglês</option>
-                    <option value="m7">Espanhol</option>
-                </select>
-                <br>
+  <h2>Calculadora de Média</h2>
 
-                <label>Trabalho: </label>
-                <input type="number" id="trabalho" placeholder="Coloque a nota do seu trabalho.">
-                <br>
+  <form id="formulario">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" required>
 
-                <label>Teste: </label>
-                <input type="number" id="teste" placeholder="Coloque a nota do seu teste.">
-                <br>
+    <br>
 
-                <label>Prova: </label>
-                <input type="number" id="prova" placeholder="Coloque a nota do sua prova.">
-                <br>
-                <button onclick="MediaAluno()">Calcular</button>
-                <br>
+    <label for="notaTrabalho">Nota do Trabalho:</label>
+    <input type="number" id="notaTrabalho" min="0" max="10" step="0.1" required>
 
-                <label id="resultado"></label>
+    <br>
 
-             </form>
-        </div>
-    </main>
-    <hr>
-    <footer>
-        <table width="80%" border="0" style="margin:auto;">
-			<tr><td align="center">Trbalho Fictício / Estudo</td></tr>
-            <tr>
-				<td align="center">Desenvolvido por <a href="https://lucasgabrieldesigner.com" target="_blank">Lucas Gabriel</a> sob orientação do prof <a href="https://sammyfreitas.github.io/portfolioSite/" target="_blank"><b>Anthony Freitas</b></a> no Curso de Programador Front-End (SENAI)</td> 
-										
-				<td ><a href="https://github.com/LucasGabrielDesigner/" target="_blank"><img class="foto" src="imagens/github.png" alt="github"></a></td></tr>						
-				
-				
-				<td align="center">Todos os direitos reservados - 2023</td>
-			</tr>
-		</table>
-    </footer>
+    <label for="notaTeste">Nota do Teste:</label>
+    <input type="number" id="notaTeste" min="0" max="10" step="0.1" 	required>
+
+    <br>
+
+    <label for="notaProva">Nota da Prova:</label>
+    <input type="number" id="notaProva" min="0" max="10" step="0.1" required>
+
+    <br>
+
+    <button type="button" onclick="MediaAluno()">Calcular Média</button>
+  </form>
+
+  <br>
+
+  <label id="resultado"></label>
+
+  <script src="./js/script.js"></script>
+
+  <hr>
+ 
+  <footer>
+    <table width="80%" border="0" style="margin:auto;">
+    <tr><td align="center">Trabalho Fictício / Estudo</td></tr>
+        <tr>
+    <td align="center">Desenvolvido por <a href="https://lucasgabrieldesigner.com" target="_blank">Lucas Gabriel</a> sob orientação do prof <a href="https://sammyfreitas.github.io/portfolioSite/" target="_blank"><b>Anthony Freitas</b></a> no Curso de Programador Front-End (SENAI)</td> 
+                
+    <td ><a href="https://github.com/LucasGabrielDesigner/" target="_blank"><img class="foto" src="imagens/github.png" alt="github"></a></td></tr>						
+    
+    
+    <td align="center">Todos os direitos reservados - 2023</td>
+  </tr>
+</table>
+</footer>
+
 </body>
 </html>
